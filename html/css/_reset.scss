@@ -1,0 +1,97 @@
+@use 'mixins.scss' as *;
+@use 'variables' as *;
+html, body {
+	@include commonMargin;
+	width: 100%;
+	min-height: 100%;
+}
+body {
+	font-family: $opensans-semi-bold;
+	font-size: 16px;
+	background: $color-html;
+}
+a, a:link, a:visited {
+    outline: none;
+	text-decoration: none;	
+	@include transition(all .3s ease-in-out);
+}
+img {
+	border: none;
+	margin: 0px;
+	max-width: 100%;
+  	display: block;
+	height: auto;
+}
+h1,h2,h3,h4,h5,h6 {
+	font-weight: bold;
+	@include commonMargin;	
+}
+form, input, select, textarea, p {
+	@include commonMargin;
+}
+textarea {
+	resize: none;
+}
+input:focus, textarea:focus {
+	outline: none;
+}
+input::-moz-focus-inner { 
+    border: 0;
+    @include commonMargin;
+}
+article, aside, details, figcaption, figure,  
+footer, header, hgroup, menu, nav, section, time {  
+	display: block; 
+	@include commonMargin;
+} 
+a,button,div {
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0); 
+	  outline: none;
+}
+iframe {
+    display: block;
+}
+* {
+	box-sizing: border-box;
+}
+::-webkit-input-placeholder {
+	opacity: 1; 
+	-webkit-transition: opacity .25s; 
+	transition: opacity .25s; 
+  }  
+  :-moz-placeholder { 
+	opacity: 1; 
+	-moz-transition: opacity .25s; 
+	transition: opacity .25s; 
+  } 
+  ::-moz-placeholder { 
+	opacity: 1; 
+	-moz-transition: opacity .25s; 
+	transition: opacity .25s; 
+  } 
+  :-ms-input-placeholder { 
+	opacity: 1; 
+	-ms-transition: opacity .25s; 
+	transition: opacity .25s; 
+  } 
+  ::placeholder { 
+	opacity: 1; 
+	transition: opacity .25s; 
+  } 
+	  
+  *:focus::-webkit-input-placeholder { 
+	opacity: 0; 
+  } 
+  *:focus:-moz-placeholder { 
+	opacity: 0; 
+  }
+  *:focus::-moz-placeholder { 
+	opacity: 0; 
+  } 
+  *:focus:-ms-input-placeholder { 
+	opacity: 0; 
+  } 
+  *:focus::placeholder { 
+	opacity: 0; 
+  } 
+

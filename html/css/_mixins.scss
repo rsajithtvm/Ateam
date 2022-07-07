@@ -1,0 +1,33 @@
+@mixin font-face($font-family, $file-path, $weight: normal, $style: normal) {
+	@font-face {
+        font-family: $font-family;
+        src:url($file-path+$font-family+'.woff') format('woff');
+        font-weight: $weight;
+        font-style: $style;
+    }
+}
+@include font-face('OpenSans-Regular', '../fonts/');
+@include font-face('OpenSans-Light', '../fonts/');
+@include font-face('OpenSans-ExtraBold', '../fonts/');
+@include font-face('OpenSans-Bold', '../fonts/');
+@include font-face('OpenSans-SemiBold', '../fonts/');
+@mixin transition($property...){
+	-webkit-transition: $property;
+	-moz-transition: $property;
+	-o-transition: $property;
+	transition: $property;
+}
+@mixin box-shadow($x-axis: 0, $y-axis: 0, $blur: 0, $color){
+  box-shadow: $x-axis  $y-axis $blur $color;
+}
+@mixin commonMargin {
+	margin: 0px;
+	padding: 0;
+}
+@mixin flex {
+	display: flex;		
+}
+@mixin background-properties {
+	background-repeat: no-repeat;
+	background-position: center;
+}
